@@ -1,0 +1,125 @@
+ 
+ :root{
+    --primary-color: #2f4f7f;
+    --secondary-color: #f7f7f7;
+    --terciary-color: #45a0e6;
+ }
+
+
+.fondo {
+    top: 101px;
+    left: 280px;
+    background-color: var(--terciary-color);
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    width: 900px;
+    height: 857px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 200px;
+}
+
+
+.card {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 363px;
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    text-align: center;
+}
+
+
+
+.card2 {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 363px;
+    position: relative;
+    top: 180px;
+    left: 350px;
+    text-align: center;
+}
+
+.card3 {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 363px;
+    position: relative !important;
+    top: 140px;
+    left: 70px;
+    text-align: center;
+}
+
+.card h2, .card2 h2, .card3 h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--terciary-color);
+}
+
+.card p, .card3 p {
+    color: black;
+}
+
+
+.card:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.card2:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px; 
+    transition: transform 0.3s ease, background-color 0.3s ease;  
+    color: black;
+}
+
+.card3:hover{
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+
+.card2 p:hover{
+    color: black;
+}
+
+
+/* Estilo para la barra de navegación */
+.bg-bar {
+    background-color: var(--terciary-color); /* Color de fondo */
+    padding: 10px 20px; /* Espaciado */
+}
+
+/* Logo en la barra de navegación */
+.navbar-brand img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+/* Estilos de los enlaces de navegación */
+.navbar-nav .nav-link {
+    color: #ffffff; /* Color del texto de los enlaces */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin: 0 10px; /* Espaciado entre los enlaces */
+    transition: color 0.3s; /* Suaviza el cambio de color */
+}
+
+.footer .div{
+    position: relative;
+
+}

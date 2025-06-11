@@ -1,0 +1,219 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    position: relative;
+    top: 60px;
+}
+
+h1, h2 {
+    color: #444;
+    text-align: center;
+}
+
+h1{
+    position: relative;
+    top:20px;
+}
+
+h2{
+    position: relative;
+    top: 30px;
+}
+
+/* Formulario */
+.form1 {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 20px;
+    padding-left: 55px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-right: 35px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+form button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Tabla */
+table {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones en la tabla */
+table button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+table button:hover {
+    background-color: #0056b3;
+}
+
+table form button {
+    background-color: #dc3545;
+
+}
+
+table form button:hover {
+    background-color: #c82333;
+}
+
+/* Ajuste para las celdas de la tabla */
+table td {
+    max-width: 200px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 5%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2),
+table th:nth-child(3),
+table td:nth-child(3),
+table th:nth-child(4),
+table td:nth-child(4),
+table th:nth-child(5),
+table td:nth-child(5),
+table th:nth-child(6),
+table td:nth-child(6),
+table th:nth-child(7),
+table td:nth-child(7),
+table th:nth-child(8),
+table td:nth-child(8) {
+    width: 12%;
+}
+
+/* Estilo para los campos de rol y fecha de nacimiento */
+select {
+    background-color: #fff;
+}
+
+input[type="date"] {
+    padding: 10px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px 0 15px 0;
+}
+
+/* Ajustes para la tabla de usuarios */
+table td button {
+    font-size: 12px;
+    padding: 8px 12px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+table td button:hover {
+    background-color: #2ca7bd;
+}
+
+/* Mejorar el tamaño de la tabla en pantallas pequeñas */
+@media (max-width: 768px) {
+    table th, table td {
+        padding: 8px 10px;
+    }
+
+    table td button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+form.Boton{
+position: relative;
+padding: 0px !important ;
+top: 5px;
+}
+
+footer{
+    position: relative;
+    top: 50px;
+}
