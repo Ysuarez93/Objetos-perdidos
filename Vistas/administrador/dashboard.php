@@ -14,20 +14,20 @@ if (isset($_SESSION['nombre'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../assets/dist/css/styless.css">
+    <link rel="stylesheet" href="../../assets/dist/css/styless.css">
     
 </head>
 <body>
     <header class="navbar">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="../index.php">
-          <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+        <a class="navbar-brand d-flex align-items-center" href="dashboard.php">
+          <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
           <span class="font-weight-bold">Objetos Perdidos</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,13 +36,7 @@ if (isset($_SESSION['nombre'])) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Bienvenida.php">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="publicaciones.php">publicaciones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.php">Dashboard</a>
+              <a class="nav-link active" aria-current="page" href="dashboard.php"></a>
             </li>
             
           </ul>
@@ -59,7 +53,6 @@ if (isset($_SESSION['nombre'])) {
                 <li><a class="dropdown-item" href="../Registros/perfil.php"> Ver Perfil</a></li>
                 <li><a class="dropdown-item" href="../Registros/editar_perfil.php">Configuración</a></li>
                 <li><a class="dropdown-item" href="../Registros/ObjPerdido.php">Publicar</a></li>
-                <li><a class="dropdown-item" href="dashboard.php">Dashboard</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="../index.php">Cerrar sesión</a></li>
 
@@ -73,15 +66,25 @@ if (isset($_SESSION['nombre'])) {
 
     <!-- Barra lateral -->
     <aside class="sidebar">
-        <div class="logo">
-            <h2>Dashboard</h2>
-        </div>
         <input type="text" placeholder="Buscar Objetos...">
         <nav class="menu">
             <a href="#">Dashboard</a>
             <a href="#">Items</a>
     
             <!-- Menú desplegable de Reports -->
+            <style>
+                /* Ocultar los menús por defecto */
+                .dropdown-content, .submenu-content {
+                    display: none;
+                }
+                
+                /* Mostrar cuando se hace hover o se activa */
+                .dropdown:hover .dropdown-content,
+                .submenu:hover .submenu-content {
+                    display: block;
+                }
+            </style>
+
             <div class="dropdown">
                 <button class="dropdown-btn">Reportes</button>
                 <div class="dropdown-content">

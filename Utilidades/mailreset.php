@@ -1,5 +1,5 @@
 <?php
-include 'BD.php'; // Conexión a la base de datos
+include '../Programas/conexion.php'; // Conexión a la base de datos
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
