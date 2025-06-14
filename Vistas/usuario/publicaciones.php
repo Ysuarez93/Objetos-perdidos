@@ -670,7 +670,6 @@ text-decoration:
                 <li><a class="dropdown-item" href="perfil.php"> Ver Perfil</a></li>
                 <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
                 <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
-                <li><a class="dropdown-item" href="../Carousel/dashboard.php">Dashboard</a></li>
                 <li><hr class="dropdown-divider"></li>
 
                 <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>

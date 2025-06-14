@@ -17,12 +17,12 @@ $usuario_id = $_SESSION['user_id'];
     <title>Publicar Objeto | Objetos Perdidos</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="carousel.css">
     
     <!-- Estilos personalizados -->
@@ -129,7 +129,7 @@ $usuario_id = $_SESSION['user_id'];
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
-                    <img src="../assets/img/logoOP.png" alt="Logo" width="30" height="30" class="me-2">
+                    <img src="../../assets/img/logoOP.png" alt="Logo" width="30" height="30" class="me-2">
                     <span class="font-weight-bold">Objetos Perdidos</span>
                 </a>
                 
@@ -140,13 +140,16 @@ $usuario_id = $_SESSION['user_id'];
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../carousel/Bienvenida.php">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="Bienvenida.php">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../carousel/publicaciones.php">Publicaciones</a>
+                        <a class="nav-link" href="publicaciones.php">Publicaciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../carousel/dashboard.php">Dashboard</a>
+                        <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="Contacto-login.php">Contacto</a>
                         </li>
                     </ul>
                     
@@ -161,12 +164,11 @@ $usuario_id = $_SESSION['user_id'];
                                 <span><?= htmlspecialchars($Nombre_de_Usuario) ?></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="/Registros/editar_perfil.php">Ver perfil</a></li>
-                                <li><a class="dropdown-item" href="/Registros/editar_perfil.php">Configuración</a></li>
-                                <li><a class="dropdown-item" href="../Registros/ObjPerdido.php">Publicar</a></li>
-                                <li><a class="dropdown-item" href="../carousel/dashboard.php">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil</a></li>
+                                <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
+                                <li><a class="dropdown-item" href=".ObjPerdido.php">Publicar</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="index.php">Cerrar sesión</a></li>
+                                <li><a class="dropdown-item" href="../../index.php">Cerrar sesión</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -183,7 +185,7 @@ $usuario_id = $_SESSION['user_id'];
                 <div class="form-container bg-white">
                     <h2 class="form-title">Publicar Objeto Perdido/Encontrado</h2>
                     
-                    <form action="./procesarObjPerdido.php" method="POST" enctype="multipart/form-data">
+                    <form action="../../Programas/procesarObjPerdido.php" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="categoria" class="form-label">Categoría</label>
                             <select class="form-select" id="categoria" name="categoria" required>
@@ -242,7 +244,7 @@ $usuario_id = $_SESSION['user_id'];
         <div class="row">
             <div class="col-12 text-center">
                 <a href="#" class="d-inline-block mb-3">
-                    <img src="../assets/img/arriba.png" alt="Ir arriba" width="30" height="30">
+                    <img src="../../assets/img/arriba.png" alt="Ir arriba" width="30" height="30">
                 </a>
                 <p class="mb-0">&copy; 2025 Dolphin Telecommunication. Todos los derechos reservados.</p>
                 <p class="mb-0">
@@ -255,7 +257,7 @@ $usuario_id = $_SESSION['user_id'];
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/color-modes.js"></script>
+    <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/color-modes.js"></script>
 </body>
 </html>
