@@ -70,7 +70,7 @@ $usuario_id = $_SESSION['user_id'];
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="Bienvenida.php">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="Nosotros-login.php">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contacto.php">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto-login.php">Contacto</a></li>
             </ul>
         </div>
     </div>
