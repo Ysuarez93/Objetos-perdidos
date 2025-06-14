@@ -5,6 +5,7 @@ include("../../Programas/controlsesionusr.php");
 
 $Nombre_de_Usuario = $_SESSION['nombre']; 
 $usuario_id = $_SESSION['user_id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -140,16 +141,15 @@ $usuario_id = $_SESSION['user_id'];
 </head>
 <body>
     <!-- Navbar Original -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
-                <img src="../../assets/img/logoOP.png" alt="Objetos Perdidos Logo" width="30" height="30" class="me-2">
-                <span class="font-weight-bold">Objetos Perdidos</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
+          <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+          <span class="font-weight-bold">Objetos Perdidos</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
             
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -169,14 +169,13 @@ $usuario_id = $_SESSION['user_id'];
 
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <p><?php echo htmlspecialchars($Nombre_de_Usuario); ?></p>
+                    <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?php echo htmlspecialchars($Nombre_de_Usuario); ?>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
-                        <li><a class="dropdown-item" href="../Registros/editar_perfil.php">Ver perfil </a></li>
-                        <li><a class="dropdown-item" href="../Registros/editar_perfil.php">Configuración</a></li>
-                        <li><a class="dropdown-item" href="../Registros/ObjPerdido.php">Publicar</a></li>
-                        <li><a class="dropdown-item" href="../Carousel/dashboard.php">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil</a></li>
+                        <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
+                        <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
                     </ul>

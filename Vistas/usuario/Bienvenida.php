@@ -21,27 +21,43 @@ $usuario_id = $_SESSION['user_id'];
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      color: #333;
+    :root {
+        --primary-color: #0d6efd; /* Bootstrap primary blue */
+        --secondary-color: #0a58ca;
+        --accent-color: #0097e6;
+        --text-color: #172b4d;
+        --light-bg: #f4f5f7;
     }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        padding-top: 56px;
+    }
+    
+    /* Estilo para la navbar */
+    .navbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
     }
     .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
+        background-color: #007bff;
+        border-color: #007bff;
     }
     .btn-primary:hover {
-      background-color: #0056b3;
-      border-color: #004a9b;
+        background-color: #0056b3;
+        border-color: #004a9b;
     }
     .carousel-caption {
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
     .featurette-image {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
@@ -56,37 +72,40 @@ $usuario_id = $_SESSION['user_id'];
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Bienvenida.php">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="publicaciones.php">Publicaciones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contacto-login.php">Contacto</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link " href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <p><?php echo htmlspecialchars($Nombre_de_Usuario); ?></p>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
-                <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil </a></li>
-                <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
-                
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
-              </ul>
-            </li>
-          </ul>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Bienvenida.php">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicaciones.php">Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto-login.php">Contacto</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?php echo htmlspecialchars($Nombre_de_Usuario); ?>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
+                        <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil</a></li>
+                        <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
+                        <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
+                    </ul>
+                    </li>
+                </ul>
+
+            </div>
         </div>
-      </div>
     </nav>
   </header>
 
@@ -192,8 +211,6 @@ $usuario_id = $_SESSION['user_id'];
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

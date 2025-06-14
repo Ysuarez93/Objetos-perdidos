@@ -568,9 +568,7 @@ text-decoration:
           </button>
         </li>
       </ul>
-    </div>
-
-    
+    </div>  
     <header><br>
     <br>
       <center><h1>Publicaciones</h1></center>
@@ -630,8 +628,7 @@ text-decoration:
 
 </div>  
 
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
           <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
@@ -643,10 +640,10 @@ text-decoration:
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Bienvenida.php">Inicio</a>
+              <a class="nav-link" aria-current="page" href="Bienvenida.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="publicaciones.php">Publicaciones</a>
+              <a class="nav-link active" href="publicaciones.php">Publicaciones</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
@@ -660,21 +657,20 @@ text-decoration:
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
             <button class="btn btn-outline-light" type="submit">Buscar</button>
           </form>
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link " href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-              <p><?php echo htmlspecialchars($Nombre_de_Usuario); ?></p> <!-- Mostrar el nombre del usuario -->
-              </a>
-              
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
-                <li><a class="dropdown-item" href="perfil.php"> Ver Perfil</a></li>
-                <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
-                <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
-                <li><hr class="dropdown-divider"></li>
-
-                <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
-
-              </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo htmlspecialchars($Nombre_de_Usuario); ?>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
+                    <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil</a></li>
+                    <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
+                    <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
+                </ul>
+                </li>
+            </ul>
             </li>
           </ul>
         </div>

@@ -22,11 +22,30 @@ $usuario_id = $_SESSION['user_id'];
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../assets/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="carousel.css">
     
     <!-- Estilos personalizados -->
     <style>
+        :root {
+            --primary-color: #0d6efd; /* Bootstrap primary blue */
+            --secondary-color: #0a58ca;
+            --accent-color: #0097e6;
+            --text-color: #172b4d;
+            --light-bg: #f4f5f7;
+        }
+
+        body {
+            padding-top: 56px;
+        }
+        
+        /* Estilo para la navbar */
+        .navbar {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -133,42 +152,37 @@ $usuario_id = $_SESSION['user_id'];
                     <span class="font-weight-bold">Objetos Perdidos</span>
                 </a>
                 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Bienvenida.php">Inicio</a>
+                            <a class="nav-link" href="Bienvenida.php">Inicio</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="publicaciones.php">Publicaciones</a>
+                            <a class="nav-link" href="publicaciones.php">Publicaciones</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
+                            <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="Contacto-login.php">Contacto</a>
+                            <a class="nav-link active" href="Contacto-login.php">Contacto</a>
                         </li>
                     </ul>
-                    
-                    <form class="d-flex me-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-light" type="submit">Buscar</button>
-                    </form>
-                    
+
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown">
-                                <span><?= htmlspecialchars($Nombre_de_Usuario) ?></span>
+                            <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php echo htmlspecialchars($Nombre_de_Usuario); ?>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
                                 <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil</a></li>
                                 <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
-                                <li><a class="dropdown-item" href=".ObjPerdido.php">Publicar</a></li>
+                                <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="../../index.php">Cerrar sesión</a></li>
+                                <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -256,7 +270,6 @@ $usuario_id = $_SESSION['user_id'];
     </footer>
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/color-modes.js"></script>
 </body>

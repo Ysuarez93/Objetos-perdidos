@@ -17,17 +17,34 @@ $usuario_id = $_SESSION['user_id'];
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
     <title>Objetos Perdidos</title>
-
     <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
-<link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
+  :root {
+      --primary-color: #0d6efd; /* Bootstrap primary blue */
+      --secondary-color: #0a58ca;
+      --accent-color: #0097e6;
+      --text-color: #172b4d;
+      --light-bg: #f4f5f7;
+  }
+
+  body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      padding-top: 56px;
+  }
+
+  /* Estilo para la navbar */
+  .navbar {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
   .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -117,50 +134,45 @@ $usuario_id = $_SESSION['user_id'];
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Bienvenida.php">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="publicaciones.php">Publicaciones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contacto-login.php">Contacto</a>
-            </li> 
-          </ul>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Bienvenida.php">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicaciones.php">Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contacto-login.php">Contacto</a>
+                    </li>
+                </ul>
 
-          <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-              <a class="nav-link " href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <p><?php echo htmlspecialchars($Nombre_de_Usuario); ?></p>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
-                  <li><a class="dropdown-item" href="../Registros/editar_perfil.php">Ver perfil </a></li>
-                  <li><a class="dropdown-item" href="../Registros/editar_perfil.php">Configuración</a></li>
-                  <li><a class="dropdown-item" href="../Registros/ObjPerdido.php">Publicar</a></li>
-                  <li><a class="dropdown-item" href="../Carousel/dashboard.php">Dashboard</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
-              </ul>
-              </li>
-          </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?php echo htmlspecialchars($Nombre_de_Usuario); ?>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
+                        <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil</a></li>
+                        <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
+                        <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
+                    </ul>
+                    </li>
+                </ul>
 
+            </div>
         </div>
-      </div>
     </nav>
   </header>
 <main>
-</body>
 
-</body>
-<!-- Contact Form -->
-<hr class="featurette-divider">
-<hr class="featurette-divider">
-<hr class="featurette-divider">
+
 <div class="container mt-5">
         <h2>Formulario de Contacto</h2>
         <form id="contactForm">
@@ -203,7 +215,6 @@ $usuario_id = $_SESSION['user_id'];
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <hr class="featurette-divider">
   <!-- FOOTER -->
   <footer class="container">
@@ -215,6 +226,7 @@ $usuario_id = $_SESSION['user_id'];
     <p>&copy;2025 Dolphin Telecommunication. Todos los derechos reservados. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
   </footer>
 </main>
+
 <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script>
         // Ejemplo de validación del formulario
@@ -233,5 +245,5 @@ $usuario_id = $_SESSION['user_id'];
                 })
         })();
     </script>
-    </body>
+</body>
 </html>
