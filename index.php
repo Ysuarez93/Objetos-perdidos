@@ -53,24 +53,22 @@
               <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="carousel/Nosotros.php">Nosotros</a>
+              <a class="nav-link" href="vistas/general/Nosotros.php">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="carousel/Contacto.php">Contacto</a>
+              <a class="nav-link" href="vistas/general/Contacto.php">Contacto</a>
             </li>
             
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
                <li class="nav-item">
-              <a class="nav-link " href="Registros/login.php">Iniciar sesión</a>
+              <a class="nav-link " href="vistas/general/login.php">Iniciar sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Registros/register.php">Registrate</a>
+              <a class="nav-link" href="vistas/general/register.php/register.php">Registrate</a>
             </li>
           </ul>
-          
-          
             </li>
           </ul>
         </div>

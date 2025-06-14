@@ -1,5 +1,5 @@
 <?php
-include 'BD.php'; // Asegúrate de que este archivo establece correctamente la conexión a la base de datos.
+include 'conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmtRol = $conexion->prepare("SELECT ID_rol FROM roles WHERE Nombre_rol = 'Usuario'");
@@ -12,11 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ID_Usuario = trim($_POST['id']);
     $Nombre_de_Usuario = trim($_POST['nombre']);
     $Correo = filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL);
-    $Contraseña = $_POST['contraseña']; // SIN Encriptar la contraseña// con encriptacion:$Contraseña = password_hash($_POST['contraseña'], PASSWORD_BCRYPT);
-    $Direccion = isset($_POST['direccion']) ? trim($_POST['direccion']) : null; // Opcional
-    $fecha_de_Nacimiento = isset($_POST['fechanacimiento']) ? $_POST['fechanacimiento'] : null; // Opcional
-    $fecha_registro = date('Y-m-d H:i:s'); // Fecha y hora actual del servidor
-    $Telefono = isset($_POST['telefono']) ? trim($_POST['telefono']) : null; // Opcional
+    $Contraseña = $_POST['contraseña'];
+    $Direccion = isset($_POST['direccion']) ? trim($_POST['direccion']) : null;
+    $fecha_de_Nacimiento = isset($_POST['fechanacimiento']) ? $_POST['fechanacimiento'] : null;
+    $fecha_registro = date('Y-m-d H:i:s');
+    $Telefono = isset($_POST['telefono']) ? trim($_POST['telefono']) : null;
     
     // Validar correo electrónico
     if (!filter_var($Correo, FILTER_VALIDATE_EMAIL)) {
@@ -38,22 +38,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Verificar si el correo ya está registrado en la base de datos
-    $sql_check = "SELECT COUNT(*) FROM Usuario WHERE Correo = ?";
-    if ($stmt_check = $conexion->prepare($sql_check)) {
-        $stmt_check->bind_param("s", $Correo);
-        $stmt_check->execute();
-        $stmt_check->bind_result($count);
-        $stmt_check->fetch();
-        $stmt_check->close();
+    // Verificar si el correo ya está registrado
+    $sql_check_email = "SELECT COUNT(*) FROM Usuario WHERE Correo = ?";
+    if ($stmt_email_check = $conexion->prepare($sql_check_email)) {
+        $stmt_email_check->bind_param("s", $Correo);
+        $stmt_email_check->execute();
+        $stmt_email_check->bind_result($email_count);
+        $stmt_email_check->fetch();
+        $stmt_email_check->close();
 
-        if ($count > 0) {
-            echo "El correo electrónico ya está registrado.";
-            exit;
+        if ($email_count > 0) {
+            die("El correo electrónico ya está registrado.");
         }
     }
 
-    // Verificar si el ID_rol existe en la tabla 'roles'
+    // Verificar si el nombre de usuario ya existe
+    $sql_check_username = "SELECT COUNT(*) FROM Usuario WHERE Nombre_de_Usuario = ?";
+    if ($stmt_username_check = $conexion->prepare($sql_check_username)) {
+        $stmt_username_check->bind_param("s", $Nombre_de_Usuario);
+        $stmt_username_check->execute();
+        $stmt_username_check->bind_result($username_count);
+        $stmt_username_check->fetch();
+        $stmt_username_check->close();
+
+        if ($username_count > 0) {
+            die("El nombre de usuario ya está en uso. Por favor elige otro.");
+        }
+    }
+
+    // Verificar si el ID_rol existe
     $sql_check_role = "SELECT COUNT(*) FROM roles WHERE ID_rol = ?";
     if ($stmt_role_check = $conexion->prepare($sql_check_role)) {
         $stmt_role_check->bind_param("i", $ID_rol);
@@ -68,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    $imagen_perfil = "../img/perfil/predeterminado.jpg";
+    $imagen_perfil = "../../img/perfil/predeterminado.jpg";
 
     // Preparar la consulta SQL para insertar el nuevo usuario
     $sql = "INSERT INTO Usuario (ID_Usuario, ID_rol, Nombre_de_Usuario, Correo, Contraseña, Direccion, Fecha_de_Nacimiento, Fecha_registro, Telefono, imagen_perfil) 
@@ -76,25 +89,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt = $conexion->prepare($sql)) {
         // Vincular los parámetros
-        $stmt->bind_param("iissssssss",  $ID_Usuario,$ID_rol, $Nombre_de_Usuario, $Correo, $Contraseña, $Direccion, $fecha_de_Nacimiento, $fecha_registro, $Telefono, $imagen_perfil);
+        $stmt->bind_param("iissssssss", $ID_Usuario, $ID_rol, $Nombre_de_Usuario, $Correo, $Contraseña, $Direccion, $fecha_de_Nacimiento, $fecha_registro, $Telefono, $imagen_perfil);
 
         // Ejecutar la consulta
         if ($stmt->execute()) {
             echo "<script>
                     alert('¡Registro exitoso! Ahora serás redirigido al inicio de sesión.');
-                    window.location.href = 'login.php'; // Redirige a la página de inicio de sesión
+                    window.location.href = '../vistas/general/login.php';
                   </script>";
         } else {
             echo "Error: " . $stmt->error;
         }
 
-        // Cerrar la declaración
         $stmt->close();
     } else {
         echo "Error al preparar la consulta: " . $conexion->error;
     }
 
-    // Cerrar la conexión
     $conexion->close();
 }
 ?>

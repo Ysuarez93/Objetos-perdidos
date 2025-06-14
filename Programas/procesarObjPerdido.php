@@ -32,7 +32,7 @@ $identificador = $max_id + 1; // Este es el nuevo ID a insertar
 $ruta_completa = null;
 if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
     $extension = strtolower(pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION));
-    $ruta_destino = "../img/publicaciones/";
+    $ruta_destino = "../../img/publicaciones/";
     $nombre_imagen = "publicacion-" . $identificador . ".$extension"; // Usar $identificador
     $ruta_completa = $ruta_destino . $nombre_imagen;
     

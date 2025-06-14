@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="../assets/dist/css/stylespu.css">
-    <link rel="stylesheet" href="../assets/dist/css/styless.css">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/dist/css/stylespu.css">
+    <link rel="stylesheet" href="../../assets/dist/css/styless.css">
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <style>
         :root {
             --primary-color: #2f4f7f;
@@ -123,8 +123,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="index.php">
-                <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+            <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
+                <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
                 Objetos Perdidos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -132,9 +132,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="../carousel/index.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../carousel/Nosotros.php">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../carousel/Contacto.php">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Bienvenida.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.php">Contacto</a></li>
                 </ul>
                 <form class="d-flex me-3">
                     <input class="form-control me-2" type="search" placeholder="Buscar">
@@ -144,10 +144,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" data-bs-toggle="dropdown">Perfil</a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="/Registros/editar_perfil.php">Ver perfil</a></li>
-                            <li><a class="dropdown-item" href="/Registros/editar_perfil.php">Configuración</a></li>
-                            <li><a class="dropdown-item" href="/Registros/ObjPerdido.php">Publicar</a></li>
-                            <li><a class="dropdown-item" href="/Registros/logout.php">Cerrar sesión</a></li>
+                            <li><a class="dropdown-item" href="editar_perfil.php">Ver perfil</a></li>
+                            <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
+                            <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
+                            <li><a class="dropdown-item" href="logout.php">Cerrar sesión</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -159,7 +159,7 @@
     <div class="container">
         <div class="sidebar">
             <img src="../imagenes_pu/usuario.png" alt="Perfil">
-            <h2>Henry Carvajal</h2>
+            <h2>  </h2>
             <div class="dropdown">
                 <label>Objetos encontrados</label>
                 <select onchange="fetchObjectDetails(this.value, 'found')">
@@ -176,9 +176,9 @@
 
         <div class="main-content">
             <div class="user-info">
-                <p><strong>Nombre:</strong> Henry Carvajal</p>
-                <p><strong>Edad:</strong> 27 años</p>
-                <p><strong>Correo:</strong> henrycarvajal@gmail.com</p>
+                <p><strong>Nombre:</strong> </p>
+                <p><strong>Edad:</strong> </p>
+                <p><strong>Correo:</strong> </p>
             </div>
             <div class="image-container">
                 <img id="dynamic-image" src="imagenes/found1.jpg">
@@ -191,8 +191,8 @@
     </div>
 
     <!-- Footer -->
-    <footer>&copy; 2024 Dolphin Telecommunication. Todos los derechos reservados.</footer>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>&copy; 2025 Dolphin Telecommunication. Todos los derechos reservados.</footer>
+    <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

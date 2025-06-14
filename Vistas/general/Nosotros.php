@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Objetos Perdidos - Sistema inteligente de gestión de objetos perdidos por Dolphin Telecomunicaciones">
     <title>Objetos Perdidos - Nosotros</title>
-    
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
@@ -135,7 +134,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="../index.php">
-                <img src="../assets/img/logoOP.png" alt="Objetos Perdidos Logo" width="30" height="30" class="me-2">
+                <img src="../../assets/img/logoOP.png" alt="Objetos Perdidos Logo" width="30" height="30" class="me-2">
                 <span class="font-weight-bold">Objetos Perdidos</span>
             </a>
             
@@ -146,24 +145,21 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.php">Inicio</a>
+                        <a class="nav-link" href="../../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="publicaciones.php">Publicaciones</a>
+                        <a class="nav-link active" href="Nosotros.php">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../carousel/Nosotros.php">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../carousel/Contacto.php">Contacto</a>
+                        <a class="nav-link" href="Contacto.php">Contacto</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../Registros/login.php">Iniciar sesión</a>
+                        <a class="nav-link" href="login.php">Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Registros/register.php">Registrate</a>
+                        <a class="nav-link" href="register.php">Registrate</a>
                     </li>
                 </ul>
             </div>
@@ -248,7 +244,7 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <img src="../assets/img/logoOP.png" alt="Logo" width="60" height="60" class="mb-4">
+                    <img src="../../assets/img/logoOP.png" alt="Logo" width="60" height="60" class="mb-4">
                     <h4 class="mb-4">Dolphin Telecommunication</h4>
                     <p class="mb-4">Conectando el futuro, hoy</p>
                     <div class="social-links mb-4">

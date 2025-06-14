@@ -1,12 +1,20 @@
+<?php
+session_start(); // Asegúrate de iniciar la sesión
+
+include("../../Programas/controlsesionusr.php");
+
+$Nombre_de_Usuario = $_SESSION['nombre']; 
+$usuario_id = $_SESSION['user_id'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuración de Perfil</title>
-    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/dist/css/stylespu.css">
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/dist/css/stylespu.css">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <style>
         body {
             background-color: #f7f7f7;
@@ -51,8 +59,8 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="../carousel/Bienvenida.php">
-                <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+            <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
+                <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
                 Objetos Perdidos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -60,9 +68,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="../carousel/Bienvenida.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../carousel/Nosotros-login.php">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../carousel/Contacto.php">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Bienvenida.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Nosotros-login.php">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.php">Contacto</a></li>
             </ul>
         </div>
     </div>
@@ -74,7 +82,7 @@
                 <h3>Configuración de Perfil</h3>
 
                 <?php
-                include 'BD.php';
+                include '../../Programas/conexion.php';
 
                 
                 ?>
@@ -125,6 +133,6 @@
     <footer class="bg-dark text-white text-center py-3 mt-4">
         &copy; 2025 Dolphin Telecommunication. Todos los derechos reservados.
     </footer>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

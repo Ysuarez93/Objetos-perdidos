@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head><script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +10,13 @@
     <title>Objetos Perdidos</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 
@@ -177,7 +177,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="index.php">
-          <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+          <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
           <span class="font-weight-bold">Objetos Perdidos</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -186,23 +186,23 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../carousel/index.php">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="../../index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Nosotros.php">Nosotros</a>
+              <a class="nav-link" href="Nosotros.php">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Contacto.php">Contacto</a>
+              <a class="nav-link" href="Contacto.php">Contacto</a>
             </li>
             
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
                <li class="nav-item">
-              <a class="nav-link " href="../Registros/login.php">Iniciar sesión</a>
+              <a class="nav-link " href="login.php">Iniciar sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Registros/register.php">Registrate</a>
+              <a class="nav-link" href="register.php">Registrate</a>
             </li>
             </li>
           </ul>
@@ -222,7 +222,7 @@
         <h2>Iniciar Sesión</h2>
         <p style="color: var(--secondary-color);">¿Es tu primera vez? <a href="register.php" style="color: rgba(61, 0, 141, 0.862);">Regístrate</a></p>
         <div class="form-container">
-        <form action="verificarLogin.php" method="POST">
+        <form action="../../Programas/verificarLogin.php" method="POST">
     <label for="email">Correo electrónico:</label>
     <input type="email" id="email" name="correo" placeholder="Ingresa tu correo electrónico..." required>
 
@@ -255,13 +255,13 @@
 
   <!-- FOOTER -->
   <div class="footer">
-            <a href="#">Twitter</a>
+            <a href="#">X</a>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
             <a href="#">LinkedIn</a>
         </div>
 </main>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

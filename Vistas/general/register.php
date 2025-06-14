@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
 <?php
 try {
     // Conexión a la base de datos
@@ -68,10 +70,7 @@ try {
 }
 ?>
 
-
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head><script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,23 +78,19 @@ try {
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
     <title>Objetos Perdidos</title>
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
-    
-
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 
   /*style de registros*/
-
   :root {
             --primary-color: #2f4f7f;
             --secondary-color: #f7f7f7;
@@ -233,54 +228,48 @@ try {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
   }
-.modal-content {
-  text-align: justify;
-  font-size: 18px; /* Tamaño de letra aumentado */
-  line-height: 1.6; /* Espaciado entre líneas */
-  padding: 20px; /* Espaciado interno */
-  max-height: 80vh; /* Limitar altura del modal */
-  overflow-y: auto; /* Habilitar scroll si el contenido es demasiado largo */
-  margin: 100px auto; /* Centrar el cuadro modal verticalmente */
-  width: 90%; /* Ajustar el ancho */
-  max-width: 1000px; /* Ancho máximo para evitar que sea demasiado ancho */
-}
-.modal-body {
-  padding: 10px 20px;
-}
-
-.modal-footer {
-  text-align: center;
-  padding-top: 15px;
-}
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  .modal-content {
+    text-align: justify;
+    font-size: 18px; /* Tamaño de letra aumentado */
+    line-height: 1.6; /* Espaciado entre líneas */
+    padding: 20px; /* Espaciado interno */
+    max-height: 80vh; /* Limitar altura del modal */
+    overflow-y: auto; /* Habilitar scroll si el contenido es demasiado largo */
+    margin: 100px auto; /* Centrar el cuadro modal verticalmente */
+    width: 90%; /* Ajustar el ancho */
+    max-width: 1000px; /* Ancho máximo para evitar que sea demasiado ancho */
+  }
+  .modal-body {
+    padding: 10px 20px;
   }
 
-  .close:hover {
-    color: black;
+  .modal-footer {
+    text-align: center;
+    padding-top: 15px;
   }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-  
-</style>
-
+    .close:hover {
+      color: black;
+    }
 
     
+  </style>    
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
-    
 
-    
     <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="index.php">
-          <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+        <a class="navbar-brand d-flex align-items-center" href="../../index.php">
+          <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
           <span class="font-weight-bold">Objetos Perdidos</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -289,23 +278,23 @@ try {
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../carousel/index.php">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="../../index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Nosotros.php">Nosotros</a>
+              <a class="nav-link" href="Nosotros.php">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Contacto.php">Contacto</a>
+              <a class="nav-link" href="Contacto.php">Contacto</a>
             </li>
             
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
                <li class="nav-item">
-              <a class="nav-link " href="../Registros/login.php">Iniciar sesión</a>
+              <a class="nav-link " href="login.php">Iniciar sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Registros/register.php">Registrate</a>
+              <a class="nav-link" href="register.php">Registrate</a>
             </li>
             </li>
           </ul>
@@ -322,7 +311,7 @@ try {
         <h2>Regístrate</h2>
         <p style="color: var(--secondary-color);">Ingresa tu información para poder ingresar</p>
         <div class="form-container">
-            <form method="POST" action="procesarRegistro.php">
+            <form method="POST" action="../../Programas/procesarRegistro.php">
                 <label for="id">Numero de Identificación:</label>
                 <input type="text" id="id" name="id" placeholder="Ingresa tu Numero de identificación..." required>
 
@@ -437,7 +426,7 @@ try {
         <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
       </div>
     </div>  <button type="submit" class="submit-btn">Registrarse</button>
-            </form>
+      </form>
   </div>
 </div>
 
@@ -459,7 +448,7 @@ try {
   <!-- FOOTER -->
   <footer class="text-center text-white py-4" ">
     <div class="container">
-      <p class="mb-0">&copy; 2024 Desarrollado Por Dolphin Telecommunication. Todos los derechos reservados.</p>
+      <p class="mb-0">&copy; 2025 Dolphin Telecommunication. Todos los derechos reservados.</p>
       <p class="mb-0">Síguenos en:</p>
       <div>
         <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
@@ -469,18 +458,24 @@ try {
     </div>
   </footer>
 </main>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JavaScript para el Modal -->
 <script>
   const modal = document.getElementById("termsModal");
   const btn = document.getElementById("openTerms");
   const span = document.querySelector(".close");
+  const acceptBtn = document.querySelector(".modal-footer .btn-primary");
 
   btn.onclick = function() {
     modal.style.display = "block";
   };
 
   span.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Agregar evento para el botón Aceptar
+  acceptBtn.onclick = function() {
     modal.style.display = "none";
   };
 

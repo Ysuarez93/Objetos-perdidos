@@ -2,11 +2,10 @@
 session_start();
 
 // Verifica si el usuario ha iniciado sesión
-if (!isset($_SESSION['usuario_id'])) {
-    // Si no está autenticado, redirige al inicio de sesión
-    header("Location: ../Registros/perfil_usuario.php");
-    exit();
-}
+include("../../Programas/controlsesionusr.php");
+
+$Nombre_de_Usuario = $_SESSION['nombre']; 
+$usuario_id = $_SESSION['user_id'];
 
 // Obtén la información del usuario desde la sesión
 $nombre = $_SESSION['nombre'];

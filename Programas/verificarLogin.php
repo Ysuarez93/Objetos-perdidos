@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,8 +29,6 @@ session_start();
 </head>
 <body>
 <?php
-include '../Programas/conexion.php';
-
 $Correo = $_POST['correo'];
 $Contrasena = $_POST['contraseña'];
 
@@ -39,10 +38,10 @@ $stmt->bind_param("s", $Correo);
 $stmt->execute();
 $result = $stmt->get_result();
 
+$_SESSION['confirmado'] = false;
+
 if ($result->num_rows === 1) {
     $user = $result->fetch_assoc();
-    $_SESSION['confirmado'] = false;
-    $user_data = $user;
 
     if ($user['estado'] !== 'activo') {
         ?>
@@ -78,11 +77,11 @@ if ($result->num_rows === 1) {
     if ($Contrasena == $user['Contraseña']) {
         $_SESSION['nombre'] = $user['Nombre_de_Usuario'];
         $_SESSION['correo'] = $user['Correo'];
-        //$_SESSION["user_id"] = $user_data["ID_usario"];
-        $_SESSION["user_rol"] = $user_data["ID_rol"];
+        $_SESSION["user_id"] = $user["ID_usuario"];
+        $_SESSION["user_rol"] = $user["ID_rol"];
         $_SESSION['confirmado'] = true;
 
-        $redirect_url = ($_SESSION["user_rol"] == 2) ? '../carousel/Bienvenida.php' : '../carousel/Dashboard.php';
+        $redirect_url = ($_SESSION["user_rol"] == 2) ? '../vistas/usuario/Bienvenida.php' : '../vistas/administrador/Dashboard.php';
         ?>
         <script>
             Swal.fire({

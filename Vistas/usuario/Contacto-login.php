@@ -1,16 +1,15 @@
 <?php
 session_start(); // Asegúrate de iniciar la sesión
 
-// Verifica si el usuario está logueado
-if (isset($_SESSION['nombre'])) {
-    $Nombre_de_Usuario = $_SESSION['nombre'];
-} else {
-    $Nombre_de_Usuario = null; // Si no hay sesión, el usuario es visitante
-}
+include("../../Programas/controlsesionusr.php");
+
+$Nombre_de_Usuario = $_SESSION['nombre']; 
+$usuario_id = $_SESSION['user_id'];
+
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head><script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,14 +18,14 @@ if (isset($_SESSION['nombre'])) {
     <meta name="generator" content="Hugo 0.122.0">
     <title>Objetos Perdidos</title>
 
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
   .bd-placeholder-img {
@@ -112,7 +111,7 @@ if (isset($_SESSION['nombre'])) {
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
-          <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+          <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
           <span class="font-weight-bold">Objetos Perdidos</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -121,16 +120,16 @@ if (isset($_SESSION['nombre'])) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../carousel/Bienvenida.php">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="Bienvenida.php">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="publicaciones.php">Publicaciones</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Nosotros-login.php">Nosotros</a>
+              <a class="nav-link" href="Nosotros-login.php">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Contacto-login.php">Contacto</a>
+              <a class="nav-link" href="Contacto-login.php">Contacto</a>
             </li> 
           </ul>
 
@@ -145,7 +144,7 @@ if (isset($_SESSION['nombre'])) {
                   <li><a class="dropdown-item" href="../Registros/ObjPerdido.php">Publicar</a></li>
                   <li><a class="dropdown-item" href="../Carousel/dashboard.php">Dashboard</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="../index.php">Cerrar sesión</a></li>
+                  <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
               </ul>
               </li>
           </ul>
@@ -210,13 +209,13 @@ if (isset($_SESSION['nombre'])) {
   <footer class="container">
     <p class="float-end">
       <a href="#">
-          <img src="/assets/img/arriba.png" alt="Ir Arriba" style="width: 30px; height: 30px;">
+          <img src="../../assets/img/arriba.png" alt="Ir Arriba" style="width: 30px; height: 30px;">
       </a>
   </p>
-    <p>&copy;2025 Objetos Perdidos, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
+    <p>&copy;2025 Dolphin Telecommunication. Todos los derechos reservados. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
   </footer>
 </main>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script>
         // Ejemplo de validación del formulario
         (function () {

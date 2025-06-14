@@ -1,7 +1,10 @@
 <?php
 // Iniciar sesión y verificar autenticación
 session_start();
-$Nombre_de_Usuario = $_SESSION['nombre'] ?? null;
+include("../../Programas/controlsesionusr.php");
+
+$Nombre_de_Usuario = $_SESSION['nombre']; 
+$usuario_id = $_SESSION['user_id'];
 ?>
 
 <!DOCTYPE html>

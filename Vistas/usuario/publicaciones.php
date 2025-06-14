@@ -1,28 +1,10 @@
 <?php
 session_start(); // Asegúrate de iniciar la sesión
 
-// Verifica si el usuario está logueado
-if (isset($_SESSION['nombre'])) {
-    $Nombre_de_Usuario = $_SESSION['nombre'];
-} else {
-    $Nombre_de_Usuario = null; // Si no hay sesión, el usuario es visitante
-}
-$usuario = "root"; // Usuario por defecto en XAMPP
-$contraseña = "";  // Contraseña por defecto vacía en XAMPP
+include("../../Programas/controlsesionusr.php");
 
-// 1. Conexión a la base de datos
-$host = "localhost";
-$dbname = "objetosperdidos";
-$username = "root";
-$password = "";
-
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario, $contraseña);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Error al conectar con la base de datos: " . $e->getMessage();
-    die();
-}
+$Nombre_de_Usuario = $_SESSION['nombre']; 
+$usuario_id = $_SESSION['user_id'];
 
 // 2. Consulta a la base de datos para obtener los objetos perdidos
 $sql = "
@@ -48,7 +30,7 @@ $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head><script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,7 +45,7 @@ $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
   .bd-placeholder-img {
@@ -623,7 +605,7 @@ text-decoration:
     </div>
 
     <div class="button-section d-flex justify-content-center">
-    <a href="../Registros/ObjPerdido.php" class="btn btn-primary mt-2">¿Perdiste o encontraste un objeto? Publícalo aquí</a>
+    <a href="ObjPerdido.php" class="btn btn-primary mt-2">¿Perdiste o encontraste un objeto? Publícalo aquí</a>
     </div>
 
 <br>
@@ -634,8 +616,8 @@ text-decoration:
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="../carousel/Bienvenida.php">
-          <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+        <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
+          <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
           <span class="font-weight-bold">Objetos Perdidos</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -668,13 +650,13 @@ text-decoration:
               </a>
               
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
-                <li><a class="dropdown-item" href="../Registros/perfil.php"> Ver Perfil</a></li>
-                <li><a class="dropdown-item" href="../Registros/editar_perfil.php">Configuración</a></li>
-                <li><a class="dropdown-item" href="../Registros/ObjPerdido.php">Publicar</a></li>
+                <li><a class="dropdown-item" href="perfil.php"> Ver Perfil</a></li>
+                <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
+                <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
                 <li><a class="dropdown-item" href="../Carousel/dashboard.php">Dashboard</a></li>
                 <li><hr class="dropdown-divider"></li>
 
-                <li><a class="dropdown-item" href="../Carousel/index.php">Cerrar sesión</a></li>
+                <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
 
               </ul>
             </li>
@@ -698,7 +680,7 @@ text-decoration:
   <footer class="container">
     <p class="float-end">
       <a href="#">
-          <img src="../assets/img/arriba.png" alt="Ir Arriba" style="width: 30px; height: 30px;">
+          <img src="../../assets/img/arriba.png" alt="Ir Arriba" style="width: 30px; height: 30px;">
       </a>
   </p>
 
@@ -709,7 +691,7 @@ text-decoration:
 
   </footer>
 </main>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

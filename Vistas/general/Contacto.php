@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head><script src="../../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +9,14 @@
     <meta name="generator" content="Hugo 0.122.0">
     <title>Objetos Perdidos</title>
 
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
   .bd-placeholder-img {
@@ -101,8 +101,8 @@
 <header>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="../index.php">
-          <img src="../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+        <a class="navbar-brand d-flex align-items-center" href="../../index.php">
+          <img src="../../assets/img/logoOP.png" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
           <span class="font-weight-bold">Objetos Perdidos</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,23 +111,23 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="../../index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Nosotros.php">Nosotros</a>
+              <a class="nav-link" href="Nosotros.php">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../carousel/Contacto.php">Contacto</a>
+              <a class="nav-link" href="Contacto.php">Contacto</a>
             </li>
             
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
                <li class="nav-item">
-              <a class="nav-link " href="../Registros/login.php">Iniciar sesión</a>
+              <a class="nav-link " href="login.php">Iniciar sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Registros/register.php">Registrate</a>
+              <a class="nav-link" href="register.php">Registrate</a>
             </li>
             </li>
           </ul>
@@ -191,13 +191,13 @@
   <footer class="container">
     <p class="float-end">
       <a href="#">
-          <img src="/assets/img/arriba.png" alt="Ir Arriba" style="width: 30px; height: 30px;">
+          <img src="../../assets/img/arriba.png" alt="Ir Arriba" style="width: 30px; height: 30px;">
       </a>
   </p>
-    <p>&copy;2025 Objetos Perdidos, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
+    <p>&copy;2025 Dolphin Telecommunication. Todos los derechos reservados. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
   </footer>
 </main>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script>
         // Ejemplo de validación del formulario
         (function () {

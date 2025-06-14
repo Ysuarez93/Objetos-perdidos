@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Autenticación</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/modal.css">
+    <link rel="stylesheet" href="../../assets/css/modal.css">
     <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 
@@ -31,7 +31,7 @@
 
             // Agregar evento de clic al botón "Cerrar"
             document.getElementById('cerrar-modal').addEventListener('click', function () {
-                window.location.href = '../index.php'; // Redirigir al usuario a la página de inicio
+                window.location.href = '../../index.php'; // Redirigir al usuario a la página de inicio
             });
         });
     </script>

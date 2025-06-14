@@ -1,12 +1,10 @@
 <?php
 session_start(); // Asegúrate de iniciar la sesión
 
-// Verifica si el usuario está logueado
-if (isset($_SESSION['nombre'])) {
-    $Nombre_de_Usuario = $_SESSION['nombre'];
-} else {
-    $Nombre_de_Usuario = null; // Si no hay sesión, el usuario es visitante
-}
+include("../../Programas/controlsesionusr.php");
+
+$Nombre_de_Usuario = $_SESSION['nombre']; 
+$usuario_id = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +14,7 @@ if (isset($_SESSION['nombre'])) {
     <meta name="description" content="Objetos Perdidos - Sistema inteligente de gestión de objetos perdidos por Dolphin Telecomunicaciones">
     <title>Objetos Perdidos - Nosotros</title>
     
-    <link rel="icon" href="../assets/img/logoOP.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/logoOP.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
@@ -145,7 +143,7 @@ if (isset($_SESSION['nombre'])) {
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="Bienvenida.php">
-                <img src="../assets/img/logoOP.png" alt="Objetos Perdidos Logo" width="30" height="30" class="me-2">
+                <img src="../../assets/img/logoOP.png" alt="Objetos Perdidos Logo" width="30" height="30" class="me-2">
                 <span class="font-weight-bold">Objetos Perdidos</span>
             </a>
             
@@ -156,16 +154,16 @@ if (isset($_SESSION['nombre'])) {
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../carousel/Bienvenida.php">Inicio</a>
+                        <a class="nav-link" href="Bienvenida.php">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="publicaciones.php">Publicaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../carousel/Nosotros-login.php">Nosotros</a>
+                        <a class="nav-link active" href="Nosotros-login.php">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../carousel/Contacto-login.php">Contacto</a>
+                        <a class="nav-link" href="Contacto-login.php">Contacto</a>
                     </li>
                 </ul>
 
@@ -180,7 +178,7 @@ if (isset($_SESSION['nombre'])) {
                         <li><a class="dropdown-item" href="../Registros/ObjPerdido.php">Publicar</a></li>
                         <li><a class="dropdown-item" href="../Carousel/dashboard.php">Dashboard</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="../index.php">Cerrar sesión</a></li>
+                        <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
                     </ul>
                     </li>
                 </ul>
@@ -267,7 +265,7 @@ if (isset($_SESSION['nombre'])) {
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <img src="../assets/img/logoOP.png" alt="Logo" width="60" height="60" class="mb-4">
+                    <img src="../../assets/img/logoOP.png" alt="Logo" width="60" height="60" class="mb-4">
                     <h4 class="mb-4">Dolphin Telecommunication</h4>
                     <p class="mb-4">Conectando el futuro, hoy</p>
                     <div class="social-links mb-4">
