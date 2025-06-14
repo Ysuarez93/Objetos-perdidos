@@ -90,7 +90,7 @@
             <div class="carousel-caption text-start" style="bottom: 150px;">
               <h1 class="display-4 fw-bold">¡BIENVENIDO!</h1>
               <p class="lead">¿Buscas algo perdido o encontraste algo ajeno? Estás en el lugar correcto.</p>
-              <p><a class="btn btn-lg btn-primary" href="Registros/register.php">Regístrese Hoy</a></p>
+              <p><a class="btn btn-lg btn-primary" href="vistas/general/register.php">Regístrese Hoy</a></p>
             </div>
           </div>
         </div>
@@ -157,7 +157,7 @@
           </div>
           <h3 class="card-title mb-3">Reportar Objeto Perdido</h3>
           <p class="card-text text-muted mb-4">Ayuda a otros a reencontrar sus pertenencias.</p>
-          <a href="Registros/register.php" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center px-4 py-3" style="font-size: 1rem; font-weight: bold; border-radius: 8px;">
+          <a href="vistas/general/register.php" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center px-4 py-3" style="font-size: 1rem; font-weight: bold; border-radius: 8px;">
             <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
             Reportar
           </a>
@@ -172,7 +172,7 @@
           </div>
           <h3 class="card-title mb-3">Publicar Objeto Encontrado</h3>
           <p class="card-text text-muted mb-4">Ayuda a otros a reencontrar sus pertenencias.</p>
-          <a href="Registros/register.php" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center px-4 py-3" style="font-size: 1rem; font-weight: bold; border-radius: 8px;">
+          <a href="vistas/general/register.php" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center px-4 py-3" style="font-size: 1rem; font-weight: bold; border-radius: 8px;">
             <i class="bi bi-box-seam me-2 fs-5"></i>
             Publicar
           </a>
