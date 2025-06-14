@@ -6,6 +6,23 @@ include("../../Programas/controlsesionusr.php");
 $Nombre_de_Usuario = $_SESSION['nombre']; 
 $usuario_id = $_SESSION['user_id'];
 
+$usuario = "root"; // Usuario por defecto en XAMPP
+$contraseña = "";  // Contraseña por defecto vacía en XAMPP
+
+// 1. Conexión a la base de datos
+$host = "localhost";
+$dbname = "objetosperdidos";
+$username = "root";
+$password = "";
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario, $contraseña);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Error al conectar con la base de datos: " . $e->getMessage();
+    die();
+}
+
 // 2. Consulta a la base de datos para obtener los objetos perdidos
 $sql = "
     SELECT 
