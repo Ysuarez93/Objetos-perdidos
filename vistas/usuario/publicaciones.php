@@ -11,7 +11,7 @@ $contraseña = "";  // Contraseña por defecto vacía en XAMPP
 
 // 1. Conexión a la base de datos
 $host = "localhost";
-$dbname = "objetosperdidos";
+$dbname = "ObjetosPerdidos";
 $username = "root";
 $password = "";
 
@@ -667,7 +667,7 @@ text-decoration:
                     <li><a class="dropdown-item" href="editar_perfil.php">Configuración</a></li>
                     <li><a class="dropdown-item" href="ObjPerdido.php">Publicar</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="../../Programas/logout.php">Cerrar sesión</a></li>
+                    <li><a class="dropdown-item" href="../../programas/logout.php">Cerrar sesión</a></li>
                 </ul>
                 </li>
             </ul>
